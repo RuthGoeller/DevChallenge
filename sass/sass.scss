@@ -92,97 +92,66 @@ body {
 .content {
   display: flex;
   color: $color-secondary;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-size: 0.9rem;
   font-family: 'Playfair Display', serif;
-}
-
-// Button styles
-.btn {
-  &:link,
-  &:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s;
-    position: relative;
-  }
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  &-white {
-    background-color: $color-primary;
-    color: $color-secondary;
-    font-size: 14px;
-    margin-top: 2rem;
-  }
 }
 
 // Animation styles
 .mouse {
   position: fixed;
-  right: 20px;
+  right: 30px;
   width: 100px;
-  top:56%;
+  top: 54%;
 }
 
 .mouse-icon {
-  width: 25px;
-  height: 45px;
-  border: 2px solid white;
-  border-radius: 15px;
+  width: 38px;
+  height: 66px;
+  border: 3px solid white;
+  border-radius: 37px;
   cursor: pointer;
   position: relative;
   text-align: center;
 }
 
 .mouse-wheel {
-  height: 6px;
+  height: 9px;
   margin: 2px auto 0;
   display: block;
-  width: 3px;
+  width: 6px;
   background-color: white;
-  border-radius: 50%;
-  -webkit-animation: 1.6s ease infinite wheel-up-down;
-  -moz-animation: 1.6s ease infinite wheel-up-down;
+  border-radius: 30%;
   animation: 1.6s ease infinite wheel-up-down;
 }
 
-@-webkit-keyframes wheel-up-down {
-  0% {
-    margin-top: 2px;
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    margin-top: 20px;
-    opacity: 0;
-  }
+// Button styles
+button {
+  position: relative;
+  margin-top: 10%;
+  background: $color-primary;
+  border: 1px solid white;
+  padding: 15px;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+  border-radius: 20px;
+  animation: shadowChange 2s infinite alternate;
 }
 
-@-moz-keyframes wheel-up-down {
+button:hover {
+  left: 4px;
+  top: 4px;
+  box-shadow: 0 0 0 0 white;
+}
+
+@keyframes shadowChange {
   0% {
-    margin-top: 2px;
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
+    box-shadow: 4px 4px 0 0 rgb(144, 183, 222);
   }
   100% {
-    margin-top: 20px;
-    opacity: 0;
+    box-shadow: 4px 4px 0 0 rgb(179, 35, 66);
   }
 }
 
