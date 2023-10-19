@@ -1,0 +1,112 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font: 400 16px/1.7 'Lato', sans-serif;
+    color: #eee;
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+.header {
+    height: 59vh;
+    background: url('/image/satellite.svg') center/cover;
+    position: relative;
+    display: flex;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: rainbow-box-shadow 2s infinite alternate;
+
+    .brand-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+
+        .brand {
+            font-size: 20px;
+        }
+    }
+
+    .text-box {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        text-align: justify;
+        max-width: 40%;
+        margin-left: 70px;
+    }
+
+    .heading-primary {
+        color: #fff;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 30px;
+
+        &-main {
+            display: block;
+            font: 400 26px/1 'Lato', sans-serif;
+            letter-spacing: 5px;
+        }
+
+        &-sub {
+            display: block;
+            font: 700 18px/1 'Lato', sans-serif;
+            letter-spacing: 7.4px;
+        }
+    }
+}
+
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &-white {
+        background-color: #fff;
+        color: rgba(1, 15, 1, 0.467);
+        font-size: 14px;
+    }
+}
+
+@keyframes rainbow-box-shadow {
+    0% {
+        box-shadow: 0 0 10px rgba(38, 44, 208, 0.5),
+                    0 0 20px rgba(0, 213, 255, 0.5),
+                    0 0 30px rgba(122, 205, 230, 0.5),
+                    0 0 40px rgba(0, 128, 0, 0.5),
+                    0 0 50px rgba(0, 0, 255, 0.5),
+                    0 0 60px rgba(0, 69, 130, 0.5),
+                    0 0 70px rgba(148, 0, 211, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(29, 43, 196, 0.5),
+                    0 0 20px rgba(0, 132, 255, 0.5),
+                    0 0 30px rgba(255, 255, 0, 0.5),
+                    0 0 40px rgba(0, 128, 0, 0.5),
+                    0 0 50px rgba(0, 0, 255, 0.5),
+                    0 0 60px rgba(75, 0, 130, 0.5),
+                    0 0 70px rgba(148, 0, 211, 0.5);
+    }
+}
