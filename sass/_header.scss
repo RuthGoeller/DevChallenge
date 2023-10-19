@@ -2,12 +2,15 @@
   height: 60vh; /* Change this line */
   background: url('/image/satellite.svg') center/cover ;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   position: relative;
   display: flex;
   border-radius: $border-radius;
   text-align: left;
   box-shadow: $box-shadow;
+  @media #{$mobile-media} {
+    border-radius: 0;
+  }
   
   .text-box {
     max-width: 800px;
@@ -36,6 +39,10 @@
     display: block;
     font: 700 80px/1 $font-family;
     letter-spacing: 9.4px;
+    @media #{$mobile-media} {
+      font: 700 30px/1 $font-family;
+    }
+    
   }
 }
 

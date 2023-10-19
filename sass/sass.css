@@ -13,17 +13,27 @@ body {
   padding: 3rem;
   overflow: hidden;
 }
+@media only screen and (max-width: 576px) {
+  body {
+    padding: 0;
+  }
+}
 
 .header {
   height: 60vh; /* Change this line */
   background: url("/image/satellite.svg") center/cover;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   position: relative;
   display: flex;
   border-radius: 40px;
   text-align: left;
   box-shadow: 0 0 38px rgba(0, 0, 255, 0.5);
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    border-radius: 0;
+  }
 }
 .header .text-box {
   max-width: 800px;
@@ -50,6 +60,11 @@ body {
   font: 700 80px/1 "Roboto Serif", serif;
   letter-spacing: 9.4px;
 }
+@media only screen and (max-width: 576px) {
+  .heading-primary-sub {
+    font: 700 30px/1 "Roboto Serif", serif;
+  }
+}
 
 .content {
   display: flex;
@@ -71,6 +86,11 @@ body {
   top: 54%;
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .mouse {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
   .mouse {
     display: none;
   }
