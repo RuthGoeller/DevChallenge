@@ -1,112 +1,201 @@
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+// Define variables
+$font-family: 'Roboto Serif', serif;
+$font-size: 16px;
+$color-white: #eee;
+$color-primary: #fff;
+$color-secondary: #d0c0d1b0;
+$margin: 0;
+$padding: 0;
+$border-radius: 40px;
+$box-shadow: 0 0 38px rgba(0, 0, 255, 0.5);
+
+// Define mixins
+@mixin box-sizing {
+  box-sizing: border-box;
 }
 
+@mixin text-align-left {
+  text-align: left;
+}
+
+// Global styles
+*,
+*::after,
+*::before {
+  margin: $margin;
+  padding: $padding;
+  @include box-sizing;
+}
+
+// Body styles
 body {
-    font: 400 16px/1.7 'Lato', sans-serif;
-    color: #eee;
-    box-sizing: border-box;
-    padding: 3rem;
+  font: 400 $font-size/1.7 $font-family;
+  color: $color-white;
+  @include box-sizing;
+  padding: 3rem;
 }
 
+// Header styles
 .header {
-    height: 59vh;
-    background: url('/image/satellite.svg') center/cover;
-    position: relative;
-    display: flex;
-    border-radius: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    animation: rainbow-box-shadow 2s infinite alternate;
+  height: 59vh;
+  background: url('/image/satellite.svg') center/cover;
+  position: relative;
+  display: flex;
+  border-radius: $border-radius;
+  text-align: left;
+  box-shadow: $box-shadow;
 
-    .brand-box {
-        position: absolute;
-        top: 40px;
-        left: 40px;
+  // Brand box styles
+  .brand-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
 
-        .brand {
-            font-size: 20px;
-        }
+    .brand {
+      font-size: 20px;
+    }
+  }
+
+  // Text box styles
+  .text-box {
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    @include text-align-left;
+    max-width: 32%;
+  }
+
+  // Heading styles
+  .heading-primary {
+    color: $color-primary;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+
+    &-main {
+      display: block;
+      font: 400 15px/1 $font-family;
+      letter-spacing: 5px;
+      margin-bottom: 60px;
     }
 
-    .text-box {
-        position: absolute;
-        top: 50%;
-        left: 20%;
-        transform: translate(-50%, -50%);
-        text-align: justify;
-        max-width: 40%;
-        margin-left: 70px;
+    &-sub {
+      display: block;
+      font: 700 80px/1 $font-family;
+      letter-spacing: 9.4px;
     }
-
-    .heading-primary {
-        color: #fff;
-        text-transform: uppercase;
-        backface-visibility: hidden;
-        margin-bottom: 30px;
-
-        &-main {
-            display: block;
-            font: 400 26px/1 'Lato', sans-serif;
-            letter-spacing: 5px;
-        }
-
-        &-sub {
-            display: block;
-            font: 700 18px/1 'Lato', sans-serif;
-            letter-spacing: 7.4px;
-        }
-    }
+  }
 }
 
+// Content styles
+.content {
+  display: flex;
+  color: $color-secondary;
+  letter-spacing: 0px;
+  font-size: 0.9rem;
+  font-family: 'Playfair Display', serif;
+}
+
+// Button styles
 .btn {
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 10px 20px;
-        display: inline-block;
-        border-radius: 100px;
-        transition: all .2s;
-        position: relative;
-    }
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+  }
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 
-    &:active {
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
 
-    &-white {
-        background-color: #fff;
-        color: rgba(1, 15, 1, 0.467);
-        font-size: 14px;
-    }
+  &-white {
+    background-color: $color-primary;
+    color: $color-secondary;
+    font-size: 14px;
+    margin-top: 2rem;
+  }
 }
 
-@keyframes rainbow-box-shadow {
-    0% {
-        box-shadow: 0 0 10px rgba(38, 44, 208, 0.5),
-                    0 0 20px rgba(0, 213, 255, 0.5),
-                    0 0 30px rgba(122, 205, 230, 0.5),
-                    0 0 40px rgba(0, 128, 0, 0.5),
-                    0 0 50px rgba(0, 0, 255, 0.5),
-                    0 0 60px rgba(0, 69, 130, 0.5),
-                    0 0 70px rgba(148, 0, 211, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(29, 43, 196, 0.5),
-                    0 0 20px rgba(0, 132, 255, 0.5),
-                    0 0 30px rgba(255, 255, 0, 0.5),
-                    0 0 40px rgba(0, 128, 0, 0.5),
-                    0 0 50px rgba(0, 0, 255, 0.5),
-                    0 0 60px rgba(75, 0, 130, 0.5),
-                    0 0 70px rgba(148, 0, 211, 0.5);
-    }
+// Animation styles
+.mouse {
+  position: fixed;
+  right: 20px;
+  width: 100px;
+  top:56%;
+}
+
+.mouse-icon {
+  width: 25px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.mouse-wheel {
+  height: 6px;
+  margin: 2px auto 0;
+  display: block;
+  width: 3px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-animation: 1.6s ease infinite wheel-up-down;
+  -moz-animation: 1.6s ease infinite wheel-up-down;
+  animation: 1.6s ease infinite wheel-up-down;
+}
+
+@-webkit-keyframes wheel-up-down {
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes wheel-up-down {
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+
+@keyframes wheel-up-down {
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 0;
+  }
 }
