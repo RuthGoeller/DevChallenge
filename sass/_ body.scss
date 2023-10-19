@@ -1,0 +1,7 @@
+body {
+    font: 400 $font-size/1.7 $font-family;
+    color: $color-white;
+    @include box-sizing;
+    padding: 3rem;
+  }
+  

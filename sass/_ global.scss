@@ -1,0 +1,7 @@
+*,
+*::after,
+*::before {
+  margin: $margin;
+  padding: $padding;
+  @include box-sizing;
+}
