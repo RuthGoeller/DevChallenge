@@ -1,5 +1,5 @@
 .header {
-  height: 60vh; /* Change this line */
+  height: 76vh; /* Change this line */
   background: url('/image/satellite.svg') center/cover ;
   background-size: cover;
   background-position: center;
@@ -13,11 +13,11 @@
   }
   
   .text-box {
-    max-width: 800px;
+    max-width: 90%;
     margin: auto;
     padding: 30px;
     text-align: left;
-    margin-top: 20%;
+    margin-top: 6%;
   }
 }
 
@@ -52,6 +52,7 @@
   letter-spacing: 0;
   font-size: 0.9rem;
   font-family: 'Playfair Display', serif;
+  max-width: 40%;
   @media #{$mobile-media} {
     display: none;
   }
