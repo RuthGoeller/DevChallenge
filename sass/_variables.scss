@@ -7,3 +7,15 @@ $margin: 0;
 $padding: 0;
 $border-radius: 40px;
 $box-shadow: 0 0 38px rgba(0, 0, 255, 0.5);
+
+
+// Breakpoints
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-large: 1200px;
+
+// Media queries
+$mobile-media: "only screen and (max-width: #{$breakpoint-mobile})";
+$tablet-media: "only screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop})";
+$desktop-media: "only screen and (min-width: #{$breakpoint-desktop})";

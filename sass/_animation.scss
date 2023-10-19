@@ -4,6 +4,9 @@
   right: 30px;
   width: 100px;
   top: 54%;
+  @media #{$tablet-media} {
+    display: none;
+  }
 
 }
 

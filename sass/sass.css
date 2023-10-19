@@ -11,12 +11,14 @@ body {
   color: #eee;
   box-sizing: border-box;
   padding: 3rem;
+  overflow: hidden;
 }
 
 .header {
-  height: 60vh;
+  height: 60vh; /* Change this line */
   background: url("/image/satellite.svg") center/cover;
-  background-size: cover; /* Add this line */
+  background-size: cover;
+  background-position: top;
   position: relative;
   display: flex;
   border-radius: 40px;
@@ -25,9 +27,9 @@ body {
 }
 .header .text-box {
   max-width: 800px;
-  margin: auto; /* Center the text box */
+  margin: auto;
   padding: 30px;
-  text-align: left; /* Adjust padding as needed */
+  text-align: left;
   margin-top: 20%;
 }
 
@@ -56,12 +58,22 @@ body {
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
 }
+@media only screen and (max-width: 576px) {
+  .content {
+    display: none;
+  }
+}
 
 .mouse {
   position: fixed;
   right: 30px;
   width: 100px;
   top: 54%;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .mouse {
+    display: none;
+  }
 }
 
 .mouse-icon {

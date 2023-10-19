@@ -1,7 +1,8 @@
 .header {
-  height: 60vh;
+  height: 60vh; /* Change this line */
   background: url('/image/satellite.svg') center/cover ;
-  background-size: cover; /* Add this line */
+  background-size: cover;
+  background-position: top;
   position: relative;
   display: flex;
   border-radius: $border-radius;
@@ -10,9 +11,9 @@
   
   .text-box {
     max-width: 800px;
-    margin: auto; /* Center the text box */
+    margin: auto;
     padding: 30px;
-    text-align: left; /* Adjust padding as needed */
+    text-align: left;
     margin-top: 20%;
   }
 }
@@ -35,5 +36,16 @@
     display: block;
     font: 700 80px/1 $font-family;
     letter-spacing: 9.4px;
+  }
+}
+
+.content {
+  display: flex;
+  color: $color-secondary;
+  letter-spacing: 0;
+  font-size: 0.9rem;
+  font-family: 'Playfair Display', serif;
+  @media #{$mobile-media} {
+    display: none;
   }
 }
