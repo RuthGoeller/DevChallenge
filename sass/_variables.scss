@@ -1,6 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 $font-family: 'Roboto', serif;
 $font-size: 16px;
@@ -11,10 +10,7 @@ $margin: 0;
 $padding: 0;
 $border-radius: 40px;
 $box-shadow: 0 0 38px rgba(0, 0, 255, 0.5);
-
-
-// Breakpoints
-$breakpoint-mobile: 730px;
+$breakpoint-mobile: 767px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 $breakpoint-large: 1200px;

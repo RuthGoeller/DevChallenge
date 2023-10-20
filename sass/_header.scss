@@ -20,11 +20,11 @@
 
   .text-box {
     position: absolute;
-    bottom: 30px;
-    left: 16px;
+    bottom: 1.875rem;
+    left: 1rem;
     max-width: 90%;
     @media #{$tablet-media} {
-      bottom: 40px;
+      bottom: 2.5rem;
     }
   }
 }
@@ -34,7 +34,7 @@
   color: $color-primary;
   text-transform: uppercase;
   backface-visibility: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   @media #{$mobile-media} {
     padding-bottom: 0;
   }
@@ -43,26 +43,26 @@
     display: block;
     font: 400 15px/1 $font-family;
     letter-spacing: 1px;
-    margin-bottom: 45px;
+    margin-bottom: 2.813rem;
     color: #e4d7d7;
 
     @media #{$mobile-media} {
-      margin-bottom: 24px;
+      margin-bottom: 1.5rem;
       font: 400 10px/1 $font-family;
     }
   }
 
   &-sub {
     display: block;
-    font: 700 47px/1 $font-family;
-    letter-spacing: 7.4px;
+    font: 700 2.938rem/1 $font-family;
+    letter-spacing: 0.463rem;
 
     @media #{$tablet-media} {
-      font: 700 60px/1 $font-family;
+      font: 700 3.75rem/1 $font-family;
     }
     @media #{$mobile-media} {
-      font: 700 20px/1 $font-family;
-      letter-spacing: 4.4px;
+      font: 700 1.25rem/1 $font-family;
+      letter-spacing: 0.275rem;
     }
   }
 }
