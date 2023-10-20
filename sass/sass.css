@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 *,
 *::after,
 *::before {
@@ -7,74 +8,103 @@
 }
 
 body {
-  font: 400 9.4117647059px "Roboto Serif", serif;
+  font: 400 9.4117647059px "Roboto", serif;
   color: #eee;
   box-sizing: border-box;
   padding: 3rem;
   overflow: hidden;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 730px) {
   body {
     padding: 0;
   }
 }
 
 .header {
-  height: 76vh; /* Change this line */
+  height: 60vh;
   background: url("/image/satellite.svg") center/cover;
-  background-size: cover;
-  background-position: center;
   position: relative;
   display: flex;
   border-radius: 40px;
   text-align: left;
   box-shadow: 0 0 38px rgba(0, 0, 255, 0.5);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: 45vh;
+  }
+}
+@media only screen and (max-width: 730px) {
   .header {
     border-radius: 0;
+    height: 35vh;
   }
 }
 .header .text-box {
+  position: absolute;
+  bottom: 30px;
+  left: 16px;
   max-width: 90%;
-  margin: auto;
-  padding: 30px;
-  text-align: left;
-  margin-top: 6%;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header .text-box {
+    bottom: 40px;
+  }
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 730px) {
+  .heading-primary {
+    padding-bottom: 0;
+  }
 }
 .heading-primary-main {
   display: block;
-  font: 400 15px/1 "Roboto Serif", serif;
-  letter-spacing: 5px;
-  margin-bottom: 60px;
+  font: 400 15px/1 "Roboto", serif;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+  color: #e4d7d7;
+}
+@media only screen and (max-width: 730px) {
+  .heading-primary-main {
+    margin-bottom: 24px;
+    font: 400 10px/1 "Roboto", serif;
+  }
 }
 .heading-primary-sub {
   display: block;
-  font: 700 80px/1 "Roboto Serif", serif;
-  letter-spacing: 9.4px;
+  font: 700 47px/1 "Roboto", serif;
+  letter-spacing: 7.4px;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .heading-primary-sub {
-    font: 700 30px/1 "Roboto Serif", serif;
+    font: 700 60px/1 "Roboto", serif;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .heading-primary-sub {
+    font: 700 20px/1 "Roboto", serif;
+    letter-spacing: 4.4px;
   }
 }
 
 .content {
   display: flex;
   color: rgba(208, 192, 209, 0.6901960784);
-  letter-spacing: 0;
   font-size: 0.9rem;
-  font-family: "Playfair Display", serif;
-  max-width: 40%;
+  max-width: 45%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    max-width: 65%;
+  }
+}
+@media only screen and (max-width: 730px) {
   .content {
     display: none;
   }
@@ -84,14 +114,14 @@ body {
   position: fixed;
   right: 30px;
   width: 100px;
-  top: 70%;
+  top: 55%;
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .mouse {
     display: none;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 730px) {
   .mouse {
     display: none;
   }
@@ -135,13 +165,20 @@ body {
   margin-top: 1.5rem;
   background: #fff;
   border: 1px solid white;
-  padding: 15px;
+  padding: 12px;
   color: black;
-  letter-spacing: 1px;
   text-transform: uppercase;
   transition: all 300ms ease-in-out;
   border-radius: 20px;
   animation: shadowChange 2s infinite alternate;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 730px) {
+  .btn {
+    padding: 6px;
+    font-size: 9px;
+  }
 }
 .btn:hover {
   left: 4px;

@@ -1,4 +1,8 @@
-$font-family: 'Roboto Serif', serif;
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+$font-family: 'Roboto', serif;
 $font-size: 16px;
 $color-white: #eee;
 $color-primary: #fff;
@@ -10,9 +14,9 @@ $box-shadow: 0 0 38px rgba(0, 0, 255, 0.5);
 
 
 // Breakpoints
-$breakpoint-mobile: 576px;
+$breakpoint-mobile: 730px;
 $breakpoint-tablet: 768px;
-$breakpoint-desktop: 992px;
+$breakpoint-desktop: 1024px;
 $breakpoint-large: 1200px;
 
 // Media queries
